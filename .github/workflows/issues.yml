@@ -1,21 +1,9 @@
-# name: Track github issues
-
-# on: 
-#   issues:
-#     types: 
-#       [opened, edited, closed, milestoned]
-
-# jobs:
-#   show_issue:
-#     name: Show issue information
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Print issue information
-#         run: echo "${{ toJSON(github) }}"
-
 name: Track github issues
 
-on: issues
+on: 
+  issues:
+    types: 
+      [opened, edited, closed, milestoned]
 
 jobs:
   show_issue:
@@ -23,4 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print issue information
-        run: echo "${{ toJSON(github.event) }}"
+        run: echo "${{ toJSON(github) }}"
+
+# name: Track github issues
+
+# on: issues
+
+# jobs:
+#   show_issue:
+#     name: Show issue information
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Print issue information
+#         run: echo "${{ toJSON(github.event) }}"
