@@ -3,10 +3,12 @@ name: Track github issues
 on: 
   issues:
     types: 
-      [opened, edited, closed, milestoned]
+      - opened
+      # [opened, edited, closed, milestoned]
 
 jobs:
   show_issue:
+    name: Show issue information
     runs-on: ubuntu-latest
     steps:
       - name: Print issue information
