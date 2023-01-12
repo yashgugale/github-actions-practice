@@ -1,9 +1,9 @@
 name: Track github issues
 
-on: issues
-    # types: 
-    #   - opened
-    #   # [opened, edited, closed, milestoned]
+on: 
+  issues:
+    types: 
+      [opened, edited, closed, milestoned]
 
 jobs:
   show_issue:
